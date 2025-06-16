@@ -54,17 +54,67 @@
   .heading {
     @apply uppercase bg-black px-6 py-3 font-work-sans font-extrabold text-white sm:text-[54px] sm:leading-[64px] text-[36px] leading-[46px] max-w-5xl text-center my-5;
   }
+  
   .pink_container {
     @apply w-full bg-primary min-h-[530px] flex justify-center items-center flex-col py-10 px-6;
-    background-image: 
+    background-image:
       radial-gradient(circle at 25% 25%, rgba(255, 255, 255, 0.1) 2px, transparent 2px),
       radial-gradient(circle at 75% 75%, rgba(255, 255, 255, 0.1) 2px, transparent 2px);
     background-size: 50px 50px;
     background-position: 0 0, 25px 25px;
   }
-}
-.search-form {
-  @apply max-w-3xl w-full min-h-[80px] bg-white border-[5px] border-black rounded-[80px] text-[24px] mt-8 px-5 flex flex-row items-center gap-5;
+  
+  .section_container {
+    @apply px-6 py-10 max-w-7xl mx-auto;
+  }
+
+  .search-form {
+    @apply max-w-3xl w-full min-h-[80px] bg-white border-[5px] border-black rounded-[80px] text-[24px] mt-8 px-5 flex flex-row items-center gap-5;
+  }
+
+  .search-input {
+    @apply flex-1 font-bold placeholder:font-semibold placeholder:text-black-100 text-black w-full h-auto outline-none;
+  }
+
+  .text-30-bold {
+    @apply text-[30px] font-bold text-black;
+  }
+
+  .text-16-medium {
+    @apply font-medium text-[16px] text-black;
+  }
+
+  .flex-between {
+    @apply flex justify-between items-center;
+  }
+
+  .organization-card {
+    @apply bg-white border-[5px] border-black py-6 px-5 rounded-[22px] shadow-200 hover:border-primary transition-all duration-500 hover:shadow-300 hover:bg-primary-100;
+  }
+
+  .organization-card_desc {
+    @apply font-normal text-[16px] line-clamp-2 my-3 text-black-100 break-all;
+  }
+
+  .organization-card_img {
+    @apply w-full h-[164px] rounded-[10px] object-cover;
+  }
+
+  .card_grid {
+    @apply grid md:grid-cols-3 sm:grid-cols-2 gap-5;
+  }
+
+  .org-card_date {
+    @apply font-medium text-[16px] bg-primary-100 px-4 py-2 rounded-full group-hover:bg-white-100;
+  }
+
+  .card_grid-sm {
+    @apply grid sm:grid-cols-2 gap-5;
+  }
+
+  .search-btn {
+    @apply size-[50px] rounded-full bg-black flex justify-center items-center text-white font-bold;
+  }
 }
 
 body {
