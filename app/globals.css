@@ -83,6 +83,7 @@
   .text-16-medium {
     @apply font-medium text-[16px] text-black;
   }
+  
 
   .flex-between {
     @apply flex justify-between items-center;
@@ -114,6 +115,10 @@
 
   .search-btn {
     @apply size-[50px] rounded-full bg-black flex justify-center items-center text-white font-bold;
+  }
+
+  .startup-card_btn {
+    @apply rounded-full bg-black-200 font-medium text-[16px] text-white px-5 py-3;
   }
 }
 
