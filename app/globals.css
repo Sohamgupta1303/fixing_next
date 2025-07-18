@@ -203,6 +203,14 @@
   .startup-card_btn {
     @apply rounded-full bg-black-200 font-medium text-[16px] text-white px-5 py-3;
   }
+
+  .nav-widget{
+    @apply py-2 bg-gradient-to-br from-[#C3BA88]/40 to-[#D4AF37]/25 border-2 border-[#968054] rounded-xl backdrop-blur-sm px-3 flex items-center gap-2;
+  }
+
+  .nav-button{
+    @apply bg-[#968054] hover:bg-[#968054]/90 text-white rounded-lg px-3 py-1.5 text-sm font-medium transition-colors border border-[#968054]/70;
+  }
 }
 
 @layer base {
