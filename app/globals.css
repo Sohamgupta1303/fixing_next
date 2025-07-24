@@ -211,6 +211,10 @@
   .nav-button{
     @apply bg-[#968054] hover:bg-[#968054]/90 text-white rounded-lg px-3 py-1.5 text-sm font-medium transition-colors border border-[#968054]/70;
   }
+
+  .h1-font{
+    @apply text-3xl font-bold text-[#335035] mb-6
+  }
 }
 
 @layer base {

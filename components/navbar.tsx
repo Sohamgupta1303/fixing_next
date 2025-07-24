@@ -2,6 +2,7 @@ import Link from "next/link";
 import React from "react";
 import { auth, signIn, signOut } from "@/auth";
 import { Button } from "./ui/button";
+import { Home, LogOut, Plus, User, User2 } from "lucide-react";
 
 async function handleSignIn() {
     "use server";
@@ -21,22 +22,29 @@ const Navbar = async () => {
                 <div className="flex items-center gap-5 text-black" >
                     {session && session ?.user ? (
                         <>
-                            <Button className="nav-button">
-                                <span className="hover:text-primary transition-colors">
-                                    create
-                                </span>
+                            
+                            <Button asChild className="nav-button cursor-pointer hover:text-primary transition-colors">
+                                <Link href={"/"}>
+                                    <Home/>
+                                </Link>
+                            </Button>
+                            
+                            <Button asChild className="nav-button hover:text-primary transition-colors cursor-pointer">
+                                <Link href={"/create"}>
+                                    <Plus/>
+                                </Link>
                             </Button>
                             <form action={handleSignOut}>
-                                <Button className = "nav-button" type="submit">
-                                    <span className="hover:text-primary transition-colors" >logout</span>
+                                <Button className="nav-button cursor-pointer hover:text-primary transition-colors" type="submit">
+                                    <LogOut/>
                                 </Button>
                             </form>
 
-                            <Link href={`/user/${session?.user?.id}`}>
-                                <Button className="nav-button hover:text-primary transition-colors">
-                                    {session?.user?.name}
-                                </Button>
-                            </Link>
+                            <Button asChild className="nav-button hover:text-primary transition-colors cursor-pointer">
+                                <Link href={`/user/${session?.user?.id}`}>
+                                    <User/>
+                                </Link>
+                            </Button>
                         </>
                     )  : (
                         <form action={handleSignIn}>
